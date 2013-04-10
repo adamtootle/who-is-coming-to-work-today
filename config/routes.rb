@@ -1,4 +1,7 @@
 Whoiscomingtowork::Application.routes.draw do
+
+  get "registration/new" => "registration#new"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
