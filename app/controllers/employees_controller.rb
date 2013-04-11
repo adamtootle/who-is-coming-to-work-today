@@ -1,4 +1,6 @@
 class EmployeesController < ApplicationController
+  respond_to :json, :html
+
   def list
     @employees = []
     if(params.has_key?(:company_name))
@@ -8,5 +10,8 @@ class EmployeesController < ApplicationController
         @employees = company.employees
       end
     end
+
+    respond_with @employees
+
   end
 end
