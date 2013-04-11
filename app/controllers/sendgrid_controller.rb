@@ -19,6 +19,7 @@ class SendgridController < ApplicationController
   private
   def register_employee
     if params.has_key?(:subject)
+      company_name_lower = params[:subject].downcase
       company = Company.where(:name => company_name_lower).first
 
       if(company.nil?)
