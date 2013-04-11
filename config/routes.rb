@@ -3,6 +3,7 @@ Whoiscomingtowork::Application.routes.draw do
   post "sendgrid/parse" => "sendgrid#parse"
 
   get ":company_name" => "employees#list"
+  root :to => 'employees#list'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
