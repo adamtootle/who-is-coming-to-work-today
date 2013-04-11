@@ -1,0 +1,7 @@
+<% if !@employees.empty? %>
+  <% @employees.each do |employee| %>
+    <%= employee.name %>
+  <% end %>
+<% else %>
+  No employees to show
+<% end %>

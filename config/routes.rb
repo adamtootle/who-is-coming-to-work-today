@@ -1,8 +1,8 @@
 Whoiscomingtowork::Application.routes.draw do
 
-  get "registration/new" => "registration#new"
+  post "employees/register" => "employees#register"
 
-  get ":company_name" => "companies#show"
+  get ":company_name" => "employees#list"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
