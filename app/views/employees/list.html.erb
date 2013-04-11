@@ -1,6 +1,20 @@
 <% if !@employees.empty? %>
   <% @employees.each do |employee| %>
-    <%= employee.name %><br />
+
+    <%= employee.name %> - 
+
+    <% if employee.checkins.any? && employee.checkins.last.is_coming %>
+      <span class="checkin yes">yes</span>
+    <% else %>
+      <span class="checkin no">no</span>
+    <% end %>
+
+    <% if employee.checkins.any? %>
+      , <%= employee.checkins.last.message %>
+    <% end %>
+
+    <br />
+
   <% end %>
 <% else %>
   No employees to show

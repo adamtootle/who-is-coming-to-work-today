@@ -1,6 +1,6 @@
 Whoiscomingtowork::Application.routes.draw do
 
-  post "employees/register" => "employees#register"
+  post "sendgrid/parse" => "sendgrid#parse"
 
   get ":company_name" => "employees#list"
 
